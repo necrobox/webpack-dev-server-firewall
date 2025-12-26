@@ -1,32 +1,16 @@
-# @funboxteam/webpack-dev-server-firewall
+# @necrobox/webpack-dev-server-firewall
 
-[![npm](https://img.shields.io/npm/v/@funboxteam/webpack-dev-server-firewall.svg)](https://www.npmjs.com/package/@funboxteam/webpack-dev-server-firewall)
+[![npm](https://img.shields.io/npm/v/@necrobox/webpack-dev-server-firewall.svg)](https://www.npmjs.com/package/@necrobox/webpack-dev-server-firewall)
 
 The package prevents uncontrollable access to dev server by asking manual approve from the developer when someone
 connects to the server from unknown IP.
 
 [По-русски](./README.ru.md)
 
-## Rationale
-
-When frontend developers run webpack-dev-server on localhost they sometimes want to check the result on the different 
-devices (e.g. smartphones, tablets). By default it's hard to do, because the server is bound on `127.0.0.1` and isn't 
-allowed to receive connections from other computers.  
-
-So, most of the time developers rebind server to `0.0.0.0` (by setting `host` option in webpack config) to make 
-it available over the local network. But at the same time it grants anyone from the same network 
-a permission to connect to the server, see the project and steal the code. Usually dev servers also serve source maps, 
-which makes the source code fully visible too. 
-
-Such dev server setup may harm even pet-projects if there are any sensitive credentials in the source code. 
-
-This firewall prevents unwanted connection to the server. It intercepts all the incoming requests, 
-checks their hosts' IPs against the list of allowed ones, and passes them through or denies.  
-
 ## Installation
 
 ```bash
-npm install --save-dev @funboxteam/webpack-dev-server-firewall
+npm install --save-dev @necrobox/webpack-dev-server-firewall
 ```
 
 ## Usage
@@ -34,11 +18,7 @@ npm install --save-dev @funboxteam/webpack-dev-server-firewall
 To use the package add it into your project's webpack config in `devServer.setupMiddlewares`:
 
 ```js
-const firewall = require('@funboxteam/webpack-dev-server-firewall');
-
-or
-
-import { firewall } from '@funboxteam/webpack-dev-server-firewall';
+const firewall = require('@necrobox/webpack-dev-server-firewall');
 
 module.exports = {
   // ...
@@ -108,7 +88,7 @@ If the developer denies the connection, the client using that IP will get respon
    To improve the security level clear the list of allowed IPs every time you run the server.
    Check out “[Additional](#additional)” section for details.
    
-3. List of known IP addresses is stored in `~/.funbox_webpack_known_hosts`.
+3. List of known IP addresses is stored in `~/.necrobox_webpack_known_hosts`.
 
    If you want to remove any IP from the known hosts, you can make it manually.
    
@@ -140,7 +120,7 @@ the list of allowed IPs from JS script.
 E.g. the code below clears the list on every server start:
 
 ```js
-const firewall = require('@funboxteam/webpack-dev-server-firewall');
+const firewall = require('@necrobox/webpack-dev-server-firewall');
 
 firewall.forgetKnownHosts();
 
@@ -153,8 +133,18 @@ module.exports = {
 };
 ```
 
-## Resources
+## Rationale
 
-- [Protect your dev server](https://dev.to/igoradamenko/protect-your-dev-server-gob)
+When frontend developers run webpack-dev-server on localhost they sometimes want to check the result on the different
+devices (e.g. smartphones, tablets). By default it's hard to do, because the server is bound on `127.0.0.1` and isn't
+allowed to receive connections from other computers.
 
-[![Sponsored by FunBox](https://funbox.ru/badges/sponsored_by_funbox_centered.svg)](https://funbox.ru)
+So, most of the time developers rebind server to `0.0.0.0` (by setting `host` option in webpack config) to make
+it available over the local network. But at the same time it grants anyone from the same network
+a permission to connect to the server, see the project and steal the code. Usually dev servers also serve source maps,
+which makes the source code fully visible too.
+
+Such dev server setup may harm even pet-projects if there are any sensitive credentials in the source code.
+
+This firewall prevents unwanted connection to the server. It intercepts all the incoming requests,
+checks their hosts' IPs against the list of allowed ones, and passes them through or denies.

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-import { forgetKnownHosts } from '.';
-import { version } from '../package.json';
+const { forgetKnownHosts } = require('.');
+const { version } = require('./package.json');
 
 if (process.argv[2] === 'forget-known-hosts') {
   forgetKnownHosts();
@@ -19,6 +19,6 @@ function showHelp() {
     forget-known-hosts      clears the list of known hosts
 
   Read more about the package:
-  https://github.com/funbox/webpack-dev-server-firewall
+  https://github.com/necrobox/webpack-dev-server-firewall
 `);
 }
