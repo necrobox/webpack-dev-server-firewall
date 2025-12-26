@@ -1,5 +1,5 @@
 {
-  "name": "@funboxteam/webpack-dev-server-firewall",
+  "name": "@necrobox/webpack-dev-server-firewall",
   "version": "3.0.0",
   "description": "Firewall for webpack-dev-server",
   "keywords": [
@@ -9,7 +9,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/funbox/webpack-dev-server-firewall"
+    "url": "https://github.com/necrobox/webpack-dev-server-firewall"
   },
   "main": "index.js",
   "bin": {
