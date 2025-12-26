@@ -88,7 +88,7 @@ If the developer denies the connection, the client using that IP will get respon
    To improve the security level clear the list of allowed IPs every time you run the server.
    Check out “[Additional](#additional)” section for details.
    
-3. List of known IP addresses is stored in `~/.funbox_webpack_known_hosts`.
+3. List of known IP addresses is stored in `~/.necrobox_webpack_known_hosts`.
 
    If you want to remove any IP from the known hosts, you can make it manually.
    

@@ -3,7 +3,7 @@ const fs = require('fs');
 const os = require('os');
 const readline = require('readline');
 
-const filepath = path.resolve(os.homedir(), '.funbox_webpack_known_hosts');
+const filepath = path.resolve(os.homedir(), '.necrobox_webpack_known_hosts');
 
 let knownHosts = [];
 
