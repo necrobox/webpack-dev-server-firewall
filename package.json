@@ -25,7 +25,7 @@
     "lint": "eslint --cache --ext .js ./"
   },
   "devDependencies": {
-    "@funboxteam/eslint-config": "7.3.0",
+    "@necrobox/eslint-config": "8.0.0",
     "eslint": "7.32.0",
     "husky": "4.3.8",
     "lint-staged": "10.2.11"
