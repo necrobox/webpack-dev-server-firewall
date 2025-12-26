@@ -19,6 +19,6 @@ function showHelp() {
     forget-known-hosts      clears the list of known hosts
 
   Read more about the package:
-  https://github.com/funbox/webpack-dev-server-firewall
+  https://github.com/necrobox/webpack-dev-server-firewall
 `);
 }
