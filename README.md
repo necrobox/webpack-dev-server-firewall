@@ -7,22 +7,6 @@ connects to the server from unknown IP.
 
 [По-русски](./README.ru.md)
 
-## Rationale
-
-When frontend developers run webpack-dev-server on localhost they sometimes want to check the result on the different 
-devices (e.g. smartphones, tablets). By default it's hard to do, because the server is bound on `127.0.0.1` and isn't 
-allowed to receive connections from other computers.  
-
-So, most of the time developers rebind server to `0.0.0.0` (by setting `host` option in webpack config) to make 
-it available over the local network. But at the same time it grants anyone from the same network 
-a permission to connect to the server, see the project and steal the code. Usually dev servers also serve source maps, 
-which makes the source code fully visible too. 
-
-Such dev server setup may harm even pet-projects if there are any sensitive credentials in the source code. 
-
-This firewall prevents unwanted connection to the server. It intercepts all the incoming requests, 
-checks their hosts' IPs against the list of allowed ones, and passes them through or denies.  
-
 ## Installation
 
 ```bash
@@ -152,5 +136,21 @@ module.exports = {
 ## Resources
 
 - [Protect your dev server](https://dev.to/igoradamenko/protect-your-dev-server-gob)
+
+## Rationale
+
+When frontend developers run webpack-dev-server on localhost they sometimes want to check the result on the different
+devices (e.g. smartphones, tablets). By default it's hard to do, because the server is bound on `127.0.0.1` and isn't
+allowed to receive connections from other computers.
+
+So, most of the time developers rebind server to `0.0.0.0` (by setting `host` option in webpack config) to make
+it available over the local network. But at the same time it grants anyone from the same network
+a permission to connect to the server, see the project and steal the code. Usually dev servers also serve source maps,
+which makes the source code fully visible too.
+
+Such dev server setup may harm even pet-projects if there are any sensitive credentials in the source code.
+
+This firewall prevents unwanted connection to the server. It intercepts all the incoming requests,
+checks their hosts' IPs against the list of allowed ones, and passes them through or denies.
 
 [![Sponsored by FunBox](https://funbox.ru/badges/sponsored_by_funbox_centered.svg)](https://funbox.ru)
