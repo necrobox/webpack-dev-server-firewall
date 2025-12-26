@@ -1,6 +1,6 @@
-# @funboxteam/webpack-dev-server-firewall
+# @necrobox/webpack-dev-server-firewall
 
-[![npm](https://img.shields.io/npm/v/@funboxteam/webpack-dev-server-firewall.svg)](https://www.npmjs.com/package/@funboxteam/webpack-dev-server-firewall)
+[![npm](https://img.shields.io/npm/v/@necrobox/webpack-dev-server-firewall.svg)](https://www.npmjs.com/package/@necrobox/webpack-dev-server-firewall)
 
 Пакет предотвращает неконтролируемый доступ к серверу разработки, 
 запрашивая подтверждение при подключении с незнакомого IP.
@@ -25,7 +25,7 @@
 ## Установка
 
 ```bash
-npm install --save-dev @funboxteam/webpack-dev-server-firewall
+npm install --save-dev @necrobox/webpack-dev-server-firewall
 ```
 
 ## Использование
@@ -34,7 +34,7 @@ npm install --save-dev @funboxteam/webpack-dev-server-firewall
 `devServer.setupMiddlewares`:
 
 ```js
-const firewall = require('@funboxteam/webpack-dev-server-firewall');
+const firewall = require('@necrobox/webpack-dev-server-firewall');
 
 module.exports = {
   // ...
@@ -139,7 +139,7 @@ webpack-dev-server-firewall forget-known-hosts
 Например, при таком описании конфига для Вебпака список IP будет очищаться при каждом запуске сервера:
 
 ```js
-const firewall = require('@funboxteam/webpack-dev-server-firewall');
+const firewall = require('@necrobox/webpack-dev-server-firewall');
 
 firewall.forgetKnownHosts();
 

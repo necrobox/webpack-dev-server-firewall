@@ -1,6 +1,6 @@
-# @funboxteam/webpack-dev-server-firewall
+# @necrobox/webpack-dev-server-firewall
 
-[![npm](https://img.shields.io/npm/v/@funboxteam/webpack-dev-server-firewall.svg)](https://www.npmjs.com/package/@funboxteam/webpack-dev-server-firewall)
+[![npm](https://img.shields.io/npm/v/@necrobox/webpack-dev-server-firewall.svg)](https://www.npmjs.com/package/@necrobox/webpack-dev-server-firewall)
 
 The package prevents uncontrollable access to dev server by asking manual approve from the developer when someone
 connects to the server from unknown IP.
@@ -26,7 +26,7 @@ checks their hosts' IPs against the list of allowed ones, and passes them throug
 ## Installation
 
 ```bash
-npm install --save-dev @funboxteam/webpack-dev-server-firewall
+npm install --save-dev @necrobox/webpack-dev-server-firewall
 ```
 
 ## Usage
@@ -34,7 +34,7 @@ npm install --save-dev @funboxteam/webpack-dev-server-firewall
 To use the package add it into your project's webpack config in `devServer.setupMiddlewares`:
 
 ```js
-const firewall = require('@funboxteam/webpack-dev-server-firewall');
+const firewall = require('@necrobox/webpack-dev-server-firewall');
 
 module.exports = {
   // ...
@@ -136,7 +136,7 @@ the list of allowed IPs from JS script.
 E.g. the code below clears the list on every server start:
 
 ```js
-const firewall = require('@funboxteam/webpack-dev-server-firewall');
+const firewall = require('@necrobox/webpack-dev-server-firewall');
 
 firewall.forgetKnownHosts();
 
