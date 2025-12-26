@@ -1,5 +1,12 @@
 # Changelog
 
+## 3.0.0 (13.05.2024)
+
+Rewrote project from JavaScript to TypeScript.
+
+Dropped support for Node.js v14.
+
+
 ## 2.1.0 (17.09.2021)
 
 Made it work with `webpack-dev-server@4`.
