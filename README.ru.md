@@ -135,10 +135,6 @@ module.exports = {
 };
 ```
 
-## Статьи
-
-- [Protect your dev server](https://dev.to/igoradamenko/protect-your-dev-server-gob)
-
 ## Мотивация
 
 Когда разработчики запускают webpack-dev-server на локальной машине, им порой нужно проверить результат работы

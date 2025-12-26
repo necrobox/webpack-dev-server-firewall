@@ -133,10 +133,6 @@ module.exports = {
 };
 ```
 
-## Resources
-
-- [Protect your dev server](https://dev.to/igoradamenko/protect-your-dev-server-gob)
-
 ## Rationale
 
 When frontend developers run webpack-dev-server on localhost they sometimes want to check the result on the different
