@@ -1,5 +1,16 @@
 # Changelog
 
+## 4.0.0 (26.12.2025)
+
+Rewrote project back from TypeScript to JavaScript.
+
+Returned support for Node.js v14, added v20, v22, v24 as well.
+
+Moved package from @funboxteam to @necrobox scope. 
+With that renamed expected known hosts file from ~/.funbox_webpack_known_hosts to ~/.necrobox_webpack_known_hosts.
+Make sure to rename your file, if you have one.
+
+
 ## 3.0.0 (13.05.2024)
 
 Rewrote project from JavaScript to TypeScript.
