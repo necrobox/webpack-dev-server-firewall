@@ -152,5 +152,3 @@ Such dev server setup may harm even pet-projects if there are any sensitive cred
 
 This firewall prevents unwanted connection to the server. It intercepts all the incoming requests,
 checks their hosts' IPs against the list of allowed ones, and passes them through or denies.
-
-[![Sponsored by FunBox](https://funbox.ru/badges/sponsored_by_funbox_centered.svg)](https://funbox.ru)
